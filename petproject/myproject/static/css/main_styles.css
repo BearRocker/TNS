@@ -1,0 +1,18 @@
+.inner-rectangle{
+        width: auto;
+        height: auto;
+        min-height: 50px;
+        background-color: #ecf0f1;
+        padding: 15px;
+        border-right: 5px solid #dbdbdb;
+        border-bottom: 2px solid #dbdbdb;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        margin-top: 20px;
+}
+
+.image{
+    width: 85px;
+    height: 85px;
+    float: left;
+    margin-right: 10px;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% load static %}
+{% block title %} Home page {% endblock %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/main_styles.css'%}" type="text/css">
+</head>
+<div class="outer-rectangle">
+  {% for game in games %}
+    <div class="inner-rectangle">
+      <img src="{{game.image.url}}" class="image">
+      <h3 style="font-family:arial black">{{ game.name }}</h3>
+      <p style="font-family:arial">{{ game.description }}</p>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

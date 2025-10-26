@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" type="text/css">
+</head>
+<body>
+    <div class="nav-item" style="margin-top: 20px">
+      <a href="home" style="color: #000000; font-family:arial black; font-size: 40px; margin-left: 20px">Back</a>
+    </div>
+    <b>
+      {{error}}
+    </b>
+    <form id="registerForm" method="POST" action="">
+      {% csrf_token %}
+        {{ form.as_p }}
+        <div class="username-box u-box">
+            <input type="text" id="login"
+                      name="login"
+                      required
+                      minlength="4"
+                      maxlength="20"
+                      size="20" placeholder="Login"/>
+        </div>
+        <div class="password-box pass-box">
+            <input type="text" id="password"
+                      name="password"
+                      required
+                      minlength="8"
+                      maxlength="20"
+                      size="20" placeholder="Password"/>
+        </div>
+      <div class="password-confirm-box pass-box">
+            <input type="text" id="password-confirm"
+                      name="password-confirm"
+                      required
+                      minlength="8"
+                      maxlength="20"
+                      size="20" placeholder="Confirm password"/>
+        </div>
+        <div class="btn-wrapper">
+            <button class="btn" id="registerButton" type="submit">Register</button>
+        </div>
+    </form>
+</body>
+</html>
